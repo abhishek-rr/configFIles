@@ -104,7 +104,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sshcd="ssh gabhiran-clouddesk.aka.corp.amazon.com"
+alias sshcd="ssh clouddesk"
+alias bb="brazil-build"
+alias bbcbb="bb clean && bb"
+alias gs="git status"
+alias gl="git log"
+alias gaa="git add ."
+alias ga="git add"
+alias gc="git commit"
+alias gpr="git pull --rebase"
+alias brb="brazil-recursive-cmd --allPackages brazil-build build"
 
 #Startup commands
 export PATH=$HOME/.toolbox/bin:$PATH
+export PATH="/usr/local/opt/node@18/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
